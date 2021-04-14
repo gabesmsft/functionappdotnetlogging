@@ -1,0 +1,25 @@
+{
+  "version": "2.0",
+  "logging": {
+    "fileLoggingMode": "debugOnly",
+    "logLevel": {
+      "Functions.FakeEventHubTrigger1": "Trace",
+      "default": "Information"
+    },
+    "applicationInsights": {
+      "samplingExcludedTypes": "Request",
+      "samplingSettings": {
+        "isEnabled": true
+      }
+    }
+  },
+  "extensions": {
+    "eventHubs": {
+      "batchCheckpointFrequency": 5,
+      "eventProcessorOptions": {
+        "maxBatchSize": 10,
+        "prefetchCount": 20
+      }
+    }
+  }
+}
